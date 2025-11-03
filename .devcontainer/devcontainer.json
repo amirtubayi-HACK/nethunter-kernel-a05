@@ -1,0 +1,17 @@
+{
+  "name": "NetHunter Kernel Builder for A05",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools"
+      ]
+    }
+  },
+  "postCreateCommand": "sudo apt update && sudo apt install -y build-essential libncurses-dev flex bison libssl-dev libelf-dev bc kmod cpio wget python3 git rsync gcc-aarch64-linux-gnu libncurses5-dev libfl2 libfl-dev",
+  "remoteUser": "vscode"
+}
